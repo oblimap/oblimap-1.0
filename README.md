@@ -6,37 +6,6 @@ Abstract. Here, we present a mapping method OBLIMAP, which projects and interpol
 http://www.geosci-model-dev.net/3/13/2010/gmd-3-13-2010.html
 
 
-
-
-To compile the OBLIMAP source:
-
- Check which fortran compiler you are using. In the Makefile default the
-  
-  Makefile.pgf90
- 
- is included, however also one of below can be included:
-  Makefile.g95
-  Makefile.gfortran
-  Makefile.mpfort
- 
- In the Makefile.* one should check the NETCDF path, in our default it is:
-  
-  NETCDF_DIR = /usr/local
- 
- After these checks / addaptions you can compile the OBLIMAP source by
- 
-  cd src/
-  make all
-  
- To run:
- 
-  cd ../
-  ./oblimap_to_and_fro_mapping.csh
-  
- or with specifying a CONFIG file:
-  
-  ./oblimap_to_and_fro_mapping.csh CONFIGs/CONFIG_mapped_ccsm_Greenland
-
-
 Thomas Reerink
+
 Januari 2010
