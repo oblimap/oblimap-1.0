@@ -1,0 +1,7 @@
+obj/oblimap_configuration_module.o : oblimap_configuration_module.f90 
+obj/oblimap_mapping_module.o : oblimap_mapping_module.f90 obj/oblimap_configuration_module.o 
+obj/oblimap_read_and_write_module.o : oblimap_read_and_write_module.f90 obj/oblimap_configuration_module.o 
+obj/oblimap_projection_module.o : oblimap_projection_module.f90 obj/oblimap_configuration_module.o 
+obj/oblimap_scan_contributions_module.o : oblimap_scan_contributions_module.f90 obj/oblimap_projection_module.o obj/oblimap_configuration_module.o 
+obj/oblimap_gcm_to_im_program.o : oblimap_gcm_to_im_program.f90 obj/oblimap_scan_contributions_module.o obj/oblimap_read_and_write_module.o obj/oblimap_mapping_module.o obj/oblimap_configuration_module.o 
+obj/oblimap_im_to_gcm_program.o : oblimap_im_to_gcm_program.f90 obj/oblimap_scan_contributions_module.o obj/oblimap_read_and_write_module.o obj/oblimap_mapping_module.o obj/oblimap_configuration_module.o 

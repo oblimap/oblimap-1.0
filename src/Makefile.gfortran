@@ -1,0 +1,18 @@
+# Configuration for the fortran gfortran compiler (Ubuntu):
+
+# Adjust MYLIB and MYINC such that they match with the libraries and include paths:
+  MYLIB  = /usr/lib
+  MYINC  = /usr/include
+  NETCDF = $(MYLIB)
+
+# Fortran Compiler:
+  F90 = gfortran
+
+# Compiler flags:
+  F90FLAGS =  -O3 -I $(MYINC) -Wall  -ffree-line-length-none
+
+# Link flags:
+  LDFLAGS = -L$(NETCDF) -lnetcdf -lnetcdff 
+
+# If the compiler can not be configured such that the module files can be placed in another directory as the current one, we specify the MOD_PATH as the current directory:
+  MOD_PATH = .

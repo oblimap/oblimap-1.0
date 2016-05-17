@@ -1,0 +1,18 @@
+# Configuration for the fortran g95 compiler (Mac):
+
+# Adjust MYLIB and MYINC such that they match with the libraries and include paths:
+  MYLIB=$(HOME)/lib
+  MYINC=$(HOME)/include
+  NETCDF=$(MYLIB)
+
+# Fortran Compiler:
+  F90 = g95
+
+# Compiler flags:
+  F90FLAGS =  -O3 -I $(MYINC) -I -Wall  -ffree-line-length-huge
+
+# Link flags:
+  LDFLAGS = -L$(NETCDF) -lnetcdf 
+
+# If the compiler can not be configured such that the module files can be placed in another directory as the current one, we specify the MOD_PATH as the current directory:
+  MOD_PATH = .

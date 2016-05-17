@@ -1,0 +1,15 @@
+# Configuration for the fortran mpfort compiler:
+
+# Adjust these path variables such that they match with the libraries and include paths ($(NETCDF)/include, library in $(NETCDF)/lib):
+  NETCDF_INCLUDE_DIR = /sara/sw/netcdf/3.6.2/include
+  NETCDF_LIB_DIR     = /sara/sw/netcdf/3.6.2/lib
+
+# Fortran Compiler:
+  F90 = mpfort -g -qfullpath -Q -qreport -qsigtrap=xl__trcedump    
+
+# Compiler flags:
+  F90FLAGS = -compiler xlf90_r -O2 -qwarn64 -qfullpath -qarch=auto -qtune=auto -qsmp=omp -I$(NETCDF_INCLUDE_DIR)
+
+# Link flags (The order of occurence matters):
+  LDFLAGS  = -L$(NETCDF_LIB_DIR) -lnetcdf 
+

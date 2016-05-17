@@ -1,0 +1,27 @@
+# Configuration for the fortran pgf90 compiler:
+
+# The path of the directory where the netcdf is installed (module in $(NETCDF)/include, library in $(NETCDF)/lib):
+  NETCDF_DIR = /usr/local
+
+# Fortran Compiler:
+  F90 = pgf90
+
+# Compiler flags:
+  F90FLAGS = -Minform=warn -Kieee -fast -I$(NETCDF)/include -module $(MOD_PATH)
+
+# Link flags (The order of occurence matters):
+  LDFLAGS = -L$(NETCDF)/lib -lnetcdf
+  
+
+# Specification:
+# Compiler flags:
+#  -fast                is the  optimalisation (causing faster executables): -02 is used
+# (-Mbounds             is the  check on array sizes during running; makes the run slower)
+#  -Minform=inform      is the  level of compiler messages (=inform or =warn)
+#  -Kieee               is the  standard procedure to handle floats for better accuracy (but costs CPU)
+#  -I$(NETCDF)/include  is the  path of the used netcdf subroutines
+#  -module              is the  option telling next argument is the mod path (see line below)
+#  $(MOD_PATH)          is the  path of directory with all the mod files  
+# Link flags:
+#  -L$(NETCDF)/lib      is the  netcdf libary path
+#  -lnetcdf             is the  netcdf libary 

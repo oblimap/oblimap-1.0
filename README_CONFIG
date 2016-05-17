@@ -1,0 +1,106 @@
+ In the CONFIG files several NAMELIST-options can be specified, they all are
+ initialized by a default value in the src/oblimap_configuration_module.f90 
+ in case no CONFIG file is used or in case a CONFIG variable is omitted in
+ the CONFIG file. See for examples of CONFIG files in  the directory CONFIGs.
+ Here the current possibilities / ranges are listed:
+ 
+ NLON_config                       = any positive INTEGER
+ NLAT_config                       = any positive INTEGER
+ NX_config                         = any positive INTEGER
+ NY_config                         = any positive INTEGER
+ dx_config                         = any positive REAL
+ dy_config                         = any positive REAL
+ NX_ext_config                     = any positive INTEGER
+ NY_ext_config                     = any positive INTEGER
+ oblimap_allocate_factor_config    = any positive REAL
+ choice_projection_method_config   = 'oblique_stereographic_projection'
+                                     'oblique_stereographic_projection_snyder'
+                                     'oblique_stereographic_projection_ellipsoid_snyder'
+                                     'oblique_lambert_equal-area_projection_snyder'
+                                     'oblique_lambert_equal-area_projection_ellipsoid_snyder'
+ lambda_M_config                   = any REAL between   0 and 360 degrees
+ phi_M_config                      = any REAL between -90 and  90 degrees
+ alpha_stereographic_config        = any REAL between   0 and  90 degrees 
+ shephard_exponent_quadrant_config = any positive REAL, usually 2 
+ shephard_exponent_radius_config   = any positive REAL, usually 2 
+ gcm_input_filename_config         = any CHARACTER string (maximum of 256 characters)
+ starting_recordnr_config          = any positive INTEGER 
+ choice_1D_lonlat_in_netcdf_config = .TRUE.
+                                     .FALSE.
+ gcm_x_axis_name_config            = any CHARACTER string (maximum of 128 characters)
+ gcm_y_axis_name_config            = any CHARACTER string (maximum of 128 characters)
+ mapped_gcm_field_1_config         = any CHARACTER string (maximum of 128 characters) 
+ mapped_gcm_field_2_config         = any CHARACTER string (maximum of 128 characters)
+ mapped_gcm_field_3_config         = any CHARACTER string (maximum of 128 characters)
+ mapped_gcm_field_4_config         = any CHARACTER string (maximum of 128 characters)
+ mapped_gcm_field_5_config         = any CHARACTER string (maximum of 128 characters)
+ mapped_gcm_field_6_config         = any CHARACTER string (maximum of 128 characters)
+ mapped_gcm_field_7_config         = any CHARACTER string (maximum of 128 characters)
+ mapped_gcm_field_8_config         = any CHARACTER string (maximum of 128 characters)
+ mapped_gcm_field_9_config         = any CHARACTER string (maximum of 128 characters)
+ gcm_to_im_factor_field_1_config   = any REAL
+ gcm_to_im_factor_field_2_config   = any REAL
+ gcm_to_im_factor_field_3_config   = any REAL
+ gcm_to_im_factor_field_4_config   = any REAL
+ gcm_to_im_factor_field_5_config   = any REAL
+ gcm_to_im_factor_field_6_config   = any REAL
+ gcm_to_im_factor_field_7_config   = any REAL
+ gcm_to_im_factor_field_8_config   = any REAL
+ gcm_to_im_factor_field_9_config   = any REAL
+ gcm_to_im_shift_field_1_config    = any REAL
+ gcm_to_im_shift_field_2_config    = any REAL
+ gcm_to_im_shift_field_3_config    = any REAL
+ gcm_to_im_shift_field_4_config    = any REAL
+ gcm_to_im_shift_field_5_config    = any REAL
+ gcm_to_im_shift_field_6_config    = any REAL
+ gcm_to_im_shift_field_7_config    = any REAL
+ gcm_to_im_shift_field_8_config    = any REAL
+ gcm_to_im_shift_field_9_config    = any REAL
+ im_created_filename_config        = any CHARACTER string (maximum of 256 characters)
+ choice_fast_map_GGM_to_IM_config  = .TRUE.
+                                     .FALSE.
+ input_fast_map_GCM_to_IM_config   = .TRUE.
+                                     .FALSE.
+ choice_radius_GCM_to_IM_config    = .TRUE.
+                                     .FALSE.
+ R_search_GCM_to_IM_config         = any positive REAL
+ im_input_filename_config          = any CHARACTER string (maximum of 256 characters)
+ mapped_im_field_1_config          = any CHARACTER string (maximum of 128 characters)
+ mapped_im_field_2_config          = any CHARACTER string (maximum of 128 characters)
+ mapped_im_field_3_config          = any CHARACTER string (maximum of 128 characters)
+ mapped_im_field_4_config          = any CHARACTER string (maximum of 128 characters)
+ mapped_im_field_5_config          = any CHARACTER string (maximum of 128 characters)
+ mapped_im_field_6_config          = any CHARACTER string (maximum of 128 characters)
+ mapped_im_field_7_config          = any CHARACTER string (maximum of 128 characters)
+ mapped_im_field_8_config          = any CHARACTER string (maximum of 128 characters)
+ mapped_im_field_9_config          = any CHARACTER string (maximum of 128 characters)
+ im_to_gcm_factor_field_1_config   = any REAL
+ im_to_gcm_factor_field_2_config   = any REAL
+ im_to_gcm_factor_field_3_config   = any REAL
+ im_to_gcm_factor_field_4_config   = any REAL
+ im_to_gcm_factor_field_5_config   = any REAL
+ im_to_gcm_factor_field_6_config   = any REAL
+ im_to_gcm_factor_field_7_config   = any REAL
+ im_to_gcm_factor_field_8_config   = any REAL
+ im_to_gcm_factor_field_9_config   = any REAL
+ im_to_gcm_shift_field_1_config    = any REAL
+ im_to_gcm_shift_field_2_config    = any REAL
+ im_to_gcm_shift_field_3_config    = any REAL
+ im_to_gcm_shift_field_4_config    = any REAL
+ im_to_gcm_shift_field_5_config    = any REAL
+ im_to_gcm_shift_field_6_config    = any REAL
+ im_to_gcm_shift_field_7_config    = any REAL
+ im_to_gcm_shift_field_8_config    = any REAL
+ im_to_gcm_shift_field_9_config    = any REAL
+ gcm_created_filename_config       = any CHARACTER string (maximum of 256 characters)
+ choice_fast_map_IM_to_GCM_config  = .TRUE.
+                                     .FALSE.
+ input_fast_map_IM_to_GCM_config   = any CHARACTER string (maximum of 256 characters)
+ choice_radius_IM_to_GCM_config    = .TRUE.
+                                     .FALSE.
+ R_search_IM_to_GCM_config         = any positive REAL
+ do_oblimap_post_processing_config = .TRUE.
+                                     .FALSE.
+ R_earth_config                    = any positive REAL
+ 
+ thomas reerink
