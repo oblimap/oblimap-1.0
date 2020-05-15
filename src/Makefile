@@ -41,9 +41,9 @@
 #     make oblimap_gcm_to_im_program                        
 #     make oblimap_im_to_gcm_program                        
 
-include Makefile.pgf90
+include Makefile.gfortran
+#include Makefile.pgf90
 #include Makefile.g95
-#include Makefile.gfortran
 #include Makefile.mpfort
 
 # Since on some platforms the compiler seems not to be able to put the object 
