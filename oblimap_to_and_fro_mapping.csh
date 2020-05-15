@@ -9,6 +9,8 @@ if($#argv == 0 || $#argv == 1) then
   set CONFIG_mapped = CONFIGs/CONFIG_mapped_ccsm_Greenland
  endif
 
+ mkdir -p Input_fast_mapping
+
  ./src/oblimap_gcm_to_im_program $CONFIG_mapped
  ./src/oblimap_im_to_gcm_program $CONFIG_mapped
 
